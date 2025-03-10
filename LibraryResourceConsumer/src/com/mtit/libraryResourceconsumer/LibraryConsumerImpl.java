@@ -1,21 +1,28 @@
 package com.mtit.libraryResourceconsumer;
 
+// import neccessary packages
 import java.util.List;
 import java.util.Scanner;
 
 import com.mtit.resourcepublisher.LibraryService;
 import com.mtit.resourcepublisher.Resource;
 
-public class LibraryConsumerImpl implements LibraryConsumerInterface{
-	private LibraryService libraryService;
+// LibraryConsumerImpl class
+public class LibraryConsumerImpl implements LibraryConsumerInterface {
+
+    // private LibraryService variable
+    private LibraryService libraryService;
+
+    // private Scanner variable
     private Scanner scn;
 
+    // LibraryConsumerImpl constructor
     public LibraryConsumerImpl(LibraryService libraryService) {
         this.libraryService = libraryService;
         this.scn = new Scanner(System.in);
     }
 
-    @Override
+    @Override // mainMenu method
     public void mainMenu() {
         while (true) {
             System.out.println("\n====================================");
@@ -52,7 +59,7 @@ public class LibraryConsumerImpl implements LibraryConsumerInterface{
         }
     }
 
-    @Override
+    @Override   // categoryMenu method
     public void categoryMenu(String category) {
         while (true) {
             System.out.println("\n-----------------------------------");
@@ -95,7 +102,7 @@ public class LibraryConsumerImpl implements LibraryConsumerInterface{
         }
     }
 
-    @Override
+    @Override   // displayResources method
     public void displayResources(List<Resource> resources) {
         System.out.println("");
         System.out.println("Available Resources        ");
@@ -111,7 +118,7 @@ public class LibraryConsumerImpl implements LibraryConsumerInterface{
         }
     }
 
-    @Override
+    @Override   // searchById method
     public void searchById(String category) {
         System.out.print("Enter ID: ");
         int id = scn.nextInt();
@@ -131,7 +138,7 @@ public class LibraryConsumerImpl implements LibraryConsumerInterface{
         scn.nextLine();
     }
 
-    @Override
+    @Override   // searchByName method
     public void searchByName() {
         System.out.print("Enter Name: ");
         String name = scn.nextLine();
@@ -142,7 +149,7 @@ public class LibraryConsumerImpl implements LibraryConsumerInterface{
         scn.nextLine();
     }
 
-    @Override
+    @Override   // borrowResource method
     public void borrowResource(String category) {
         System.out.print("Enter Resource ID to borrow: ");
         int borrowId = scn.nextInt();
@@ -169,7 +176,7 @@ public class LibraryConsumerImpl implements LibraryConsumerInterface{
         scn.nextLine();
     }
 
-    @Override
+    @Override   // returnResource method
     public void returnResource() {
         System.out.print("Enter Resource ID to return: ");
         int returnId = scn.nextInt();
@@ -182,7 +189,5 @@ public class LibraryConsumerImpl implements LibraryConsumerInterface{
         System.out.println("Press Enter to go back.");
         scn.nextLine();
     }
-
-	
 
 }

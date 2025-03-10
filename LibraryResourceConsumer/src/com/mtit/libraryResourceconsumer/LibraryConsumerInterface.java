@@ -1,21 +1,30 @@
 package com.mtit.libraryResourceconsumer;
 
+// import neccessary packages
 import java.util.List;
-
 import com.mtit.resourcepublisher.Resource;
 
+// LibraryConsumerInterface interface
 public interface LibraryConsumerInterface {
-	void mainMenu();
 
-	void categoryMenu(String category);
+    // mainMenu method
+    void mainMenu();
 
-	void displayResources(List<Resource> resources);
+    // categoryMenu method
+    void categoryMenu(String category);
 
-	void searchById(String category);
+    // displayResources method	
+    void displayResources(List<Resource> resources);
 
-	void searchByName();
+	// searchById method
+    void searchById(String category);
 
-	void borrowResource(String category);
+	// searchByName method
+    void searchByName();
 
+	// borrowResource method
+    void borrowResource(String category);
+
+	// returnResource method
 	void returnResource();
 }
