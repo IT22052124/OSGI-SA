@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: StudentEventConsumer
+Bundle-SymbolicName: StudentEventConsumer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: studenteventconsumer.StudenrDashboardActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-20
+Automatic-Module-Name: StudentEventConsumer
+Import-Package: announcementpublisher,
+ eventpublisher,
+ org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
