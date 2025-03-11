@@ -9,34 +9,36 @@ import org.osgi.framework.ServiceReference;
 
 // AdminDashboardActivator class
 public class LibraryAdminActivator implements BundleActivator {
+
     private ServiceReference<?> serviceReference;   // Service reference
     private LibraryAdmin adminDashboard;  // Admin dashboard
     private LibraryService libraryService;
 
-
-    @Override
+    @Override // Start method
     public void start(BundleContext context) throws Exception {
-        System.out.println("Admin Dashboard Started");
+
+        System.out.println("Admin Dashboard Started"); // Print message
 
         serviceReference = context.getServiceReference(LibraryService.class.getName()); // Get service reference
 
         // If service reference is not null, get the library service and start the admin dashboard
         if (serviceReference != null) {
-            libraryService = (LibraryService) context.getService(serviceReference);
-            adminDashboard = new LibraryAdminImpl(libraryService);
-            adminDashboard.mainMenu();
+            libraryService = (LibraryService) context.getService(serviceReference); // Get library service
+            adminDashboard = new LibraryAdminImpl(libraryService); // Create admin dashboard
+            adminDashboard.mainMenu(); // Start admin dashboard
         } else {
-            System.out.println("\n ⚠ Library Service Not Available.\n");
+            System.out.println("\n ⚠ Library Service Not Available.\n"); // Print message
         }
     }
 
-    @Override
+    @Override // Stop method
     public void stop(BundleContext context) throws Exception {
-        System.out.println("Admin Dashboard Stopped.");
 
+        System.out.println("Admin Dashboard Stopped."); // Print message
 
+        // If service reference is not null, release the service
         if (serviceReference != null) {
-            context.ungetService(serviceReference); // Release service
+            context.ungetService(serviceReference);
         }
 
     }
