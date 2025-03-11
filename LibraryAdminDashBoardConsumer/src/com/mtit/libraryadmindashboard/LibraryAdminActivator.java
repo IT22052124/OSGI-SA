@@ -38,7 +38,7 @@ public class LibraryAdminActivator implements BundleActivator {
 
         // If service reference is not null, release the service
         if (serviceReference != null) {
-            context.ungetService(serviceReference);
+            context.ungetService(serviceReference);    
         }
 
     }
