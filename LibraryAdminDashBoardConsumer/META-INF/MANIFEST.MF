@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: LibraryAdminDashBoard
 Bundle-SymbolicName: LibraryAdminDashBoardConsumer
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: libraryadmindashboard.AdminDashboardActivator
+Bundle-Activator: libraryadmindashboard.LibraryAdminActivator
 Bundle-Vendor: MTIT
 Bundle-RequiredExecutionEnvironment: JavaSE-20
 Automatic-Module-Name: LibraryAdminDashBoard
