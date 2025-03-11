@@ -17,17 +17,7 @@ public class LibraryAdminImpl implements LibraryAdmin {
 		this.scn = new Scanner(System.in);
 	}
 
-	@Override
-	public void start() {
-		System.out.println("Admin Dashboard Started");
-		mainMenu();
-	}
-
-	@Override
-	public void stop() {
-		System.out.println("Admin Dashboard Stopping...");
-		scn.close();
-	}
+	
 
 	@Override
 	public void mainMenu() {

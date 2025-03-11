@@ -6,9 +6,7 @@ import com.mtit.resourcepublisher.Resource;
 
 public interface LibraryAdmin {
 
-	void start();
-
-	void stop();
+	
 
 	void mainMenu();
 
